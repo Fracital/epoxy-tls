@@ -1292,7 +1292,7 @@ function __wbg_get_imports() {
         const ret = makeMutClosure(arg0, arg1, 154, __wbg_adapter_43);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper623 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper625 = function(arg0, arg1, arg2) {
         const ret = makeMutClosure(arg0, arg1, 154, __wbg_adapter_32);
         return addHeapObject(ret);
     };
@@ -1443,4 +1443,4 @@ async function __wbg_init(module_or_path) {
 }
 
 export default __wbg_init;
-export const info = { version: "2.1.20-1", minimal: 1===1, release: 1===1, commit: "63e6c6e1e2411157023146eb7d8999303780593c" };
+export const info = { version: "2.1.20-1", minimal: 1===1, release: 1===1, commit: "9cde724aea1a0f5e46b1c962b3d19ca1389af074" };

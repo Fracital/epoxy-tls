@@ -1,7 +1,11 @@
 {
 	"name": "@mercuryworkshop/epoxy-tls",
-	"version": "2.1.20-fracital.1",
-	"description": "A wasm library for using raw encrypted tls/ssl/tcp/udp/https/websocket streams on the browser (Fracital build: HTTP/2 response header blocks up to 256 KiB)",
+	"version": "2.1.20-1",
+	"description": "A wasm library for using raw encrypted tls/ssl/tcp/udp/https/websocket streams on the browser",
+	"scripts": {
+		"build": "bash build.sh",
+		"prepack": "npm run build && bash publish.sh"
+	},
 	"keywords": [
 		"wasm",
 		"ssl",
@@ -13,9 +17,10 @@
 	"author": "MercuryWorkshop",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Fracital/epoxy-tls.git"
+		"url": "git+https://github.com/MercuryWorkshop/epoxy-tls.git"
 	},
 	"license": "AGPL-3.0-only",
+	"packageManager": "pnpm@10.27.0",
 	"exports": {
 		".": {
 			"import": "./full/epoxy-bundled.js",

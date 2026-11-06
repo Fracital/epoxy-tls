@@ -1572,4 +1572,4 @@ async function __wbg_init(module_or_path) {
 }
 
 export default __wbg_init;
-export const info = { version: "2.1.20-1", minimal: 0===1, release: 1===1, commit: "63e6c6e1e2411157023146eb7d8999303780593c" };
+export const info = { version: "2.1.20-1", minimal: 0===1, release: 1===1, commit: "9cde724aea1a0f5e46b1c962b3d19ca1389af074" };
