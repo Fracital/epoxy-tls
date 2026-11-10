@@ -53,6 +53,20 @@ export class EpoxyClientOptions {
   pem_files: string[];
   disable_certificate_validation: boolean;
   buffer_size: number;
+  /**
+   * r" `(host) => Promise<Uint8Array | null>`: the ECHConfigList of
+   * r" the host's HTTPS DNS record (RFC 9460 `ech`), asked before a
+   * r" TLS connection to a DNS name opens. With one, the connection
+   * r" offers real ECH (RFC 9849) as Chrome does; without, GREASE.
+   */
+  get ech_resolver(): Function | undefined;
+  /**
+   * r" `(host) => Promise<Uint8Array | null>`: the ECHConfigList of
+   * r" the host's HTTPS DNS record (RFC 9460 `ech`), asked before a
+   * r" TLS connection to a DNS name opens. With one, the connection
+   * r" offers real ECH (RFC 9849) as Chrome does; without, GREASE.
+   */
+  set ech_resolver(value: Function | null | undefined);
 }
 export class EpoxyHandlers {
   free(): void;

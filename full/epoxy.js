@@ -274,23 +274,23 @@ function _assertClass(instance, klass) {
         throw new Error(`expected instance of ${klass.name}`);
     }
 }
-function __wbg_adapter_32(arg0, arg1, arg2) {
+function __wbg_adapter_34(arg0, arg1, arg2) {
     wasm._dyn_core_468103882f7db0e1___ops__function__FnMut_______Output______as_wasm_bindgen_9a4121ca78dda45___closure__WasmClosure___describe__invoke___wasm_bindgen_9a4121ca78dda45___JsValue_____(arg0, arg1, addHeapObject(arg2));
 }
 
-function __wbg_adapter_35(arg0, arg1, arg2) {
+function __wbg_adapter_37(arg0, arg1, arg2) {
     wasm._dyn_core_468103882f7db0e1___ops__function__Fn_______Output______as_wasm_bindgen_9a4121ca78dda45___closure__WasmClosure___describe__invoke___wasm_bindgen_9a4121ca78dda45___JsValue_____(arg0, arg1, addHeapObject(arg2));
 }
 
-function __wbg_adapter_40(arg0, arg1) {
+function __wbg_adapter_42(arg0, arg1) {
     wasm._dyn_core_468103882f7db0e1___ops__function__Fn_____Output______as_wasm_bindgen_9a4121ca78dda45___closure__WasmClosure___describe__invoke______(arg0, arg1);
 }
 
-function __wbg_adapter_43(arg0, arg1) {
+function __wbg_adapter_45(arg0, arg1) {
     wasm._dyn_core_468103882f7db0e1___ops__function__FnMut_____Output______as_wasm_bindgen_9a4121ca78dda45___closure__WasmClosure___describe__invoke______(arg0, arg1);
 }
 
-function __wbg_adapter_151(arg0, arg1, arg2, arg3) {
+function __wbg_adapter_157(arg0, arg1, arg2, arg3) {
     wasm.wasm_bindgen_9a4121ca78dda45___convert__closures__invoke2_mut___wasm_bindgen_9a4121ca78dda45___JsValue__wasm_bindgen_9a4121ca78dda45___JsValue_____(arg0, arg1, addHeapObject(arg2), addHeapObject(arg3));
 }
 
@@ -656,6 +656,27 @@ export class EpoxyClientOptions {
     set buffer_size(arg0) {
         wasm.__wbg_set_epoxyclientoptions_buffer_size(this.__wbg_ptr, arg0);
     }
+    /**
+     * r" `(host) => Promise<Uint8Array | null>`: the ECHConfigList of
+     * r" the host's HTTPS DNS record (RFC 9460 `ech`), asked before a
+     * r" TLS connection to a DNS name opens. With one, the connection
+     * r" offers real ECH (RFC 9849) as Chrome does; without, GREASE.
+     * @returns {Function | undefined}
+     */
+    get ech_resolver() {
+        const ret = wasm.__wbg_get_epoxyclientoptions_ech_resolver(this.__wbg_ptr);
+        return takeObject(ret);
+    }
+    /**
+     * r" `(host) => Promise<Uint8Array | null>`: the ECHConfigList of
+     * r" the host's HTTPS DNS record (RFC 9460 `ech`), asked before a
+     * r" TLS connection to a DNS name opens. With one, the connection
+     * r" offers real ECH (RFC 9849) as Chrome does; without, GREASE.
+     * @param {Function | null} [arg0]
+     */
+    set ech_resolver(arg0) {
+        wasm.__wbg_set_epoxyclientoptions_ech_resolver(this.__wbg_ptr, isLikeNone(arg0) ? 0 : addHeapObject(arg0));
+    }
     constructor() {
         const ret = wasm.epoxyclientoptions_new_default();
         this.__wbg_ptr = ret >>> 0;
@@ -1001,6 +1022,10 @@ function __wbg_get_imports() {
         const ret = getObject(arg0).call(getObject(arg1), getObject(arg2));
         return addHeapObject(ret);
     }, arguments) };
+    imports.wbg.__wbg_call_833bed5770ea2041 = function() { return handleError(function (arg0, arg1, arg2, arg3) {
+        const ret = getObject(arg0).call(getObject(arg1), getObject(arg2), getObject(arg3));
+        return addHeapObject(ret);
+    }, arguments) };
     imports.wbg.__wbg_cancel_8a308660caa6cadf = function(arg0) {
         const ret = getObject(arg0).cancel();
         return addHeapObject(ret);
@@ -1140,6 +1165,16 @@ function __wbg_get_imports() {
         const ret = result;
         return ret;
     };
+    imports.wbg.__wbg_instanceof_Uint8Array_17156bcf118086a9 = function(arg0) {
+        let result;
+        try {
+            result = getObject(arg0) instanceof Uint8Array;
+        } catch (_) {
+            result = false;
+        }
+        const ret = result;
+        return ret;
+    };
     imports.wbg.__wbg_instanceof_Url_a8a94b3a8d7be902 = function(arg0) {
         let result;
         try {
@@ -1172,7 +1207,7 @@ function __wbg_get_imports() {
                 const a = state0.a;
                 state0.a = 0;
                 try {
-                    return __wbg_adapter_151(a, state0.b, arg0, arg1);
+                    return __wbg_adapter_157(a, state0.b, arg0, arg1);
                 } finally {
                     state0.a = a;
                 }
@@ -1417,24 +1452,24 @@ function __wbg_get_imports() {
         const ret = false;
         return ret;
     };
-    imports.wbg.__wbindgen_closure_wrapper5040 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 173, __wbg_adapter_43);
+    imports.wbg.__wbindgen_closure_wrapper5100 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 175, __wbg_adapter_45);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper830 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 173, __wbg_adapter_32);
+    imports.wbg.__wbindgen_closure_wrapper846 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 175, __wbg_adapter_34);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper902 = function(arg0, arg1, arg2) {
-        const ret = makeClosure(arg0, arg1, 18, __wbg_adapter_35);
+    imports.wbg.__wbindgen_closure_wrapper918 = function(arg0, arg1, arg2) {
+        const ret = makeClosure(arg0, arg1, 18, __wbg_adapter_37);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper904 = function(arg0, arg1, arg2) {
-        const ret = makeClosure(arg0, arg1, 18, __wbg_adapter_35);
+    imports.wbg.__wbindgen_closure_wrapper920 = function(arg0, arg1, arg2) {
+        const ret = makeClosure(arg0, arg1, 18, __wbg_adapter_37);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper906 = function(arg0, arg1, arg2) {
-        const ret = makeClosure(arg0, arg1, 18, __wbg_adapter_40);
+    imports.wbg.__wbindgen_closure_wrapper922 = function(arg0, arg1, arg2) {
+        const ret = makeClosure(arg0, arg1, 18, __wbg_adapter_42);
         return addHeapObject(ret);
     };
     imports.wbg.__wbindgen_debug_string = function(arg0, arg1) {
@@ -1475,6 +1510,10 @@ function __wbg_get_imports() {
     };
     imports.wbg.__wbindgen_memory = function() {
         const ret = wasm.memory;
+        return addHeapObject(ret);
+    };
+    imports.wbg.__wbindgen_number_new = function(arg0) {
+        const ret = arg0;
         return addHeapObject(ret);
     };
     imports.wbg.__wbindgen_object_clone_ref = function(arg0) {
