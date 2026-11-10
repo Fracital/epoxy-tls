@@ -10,6 +10,8 @@ type ReadableStreamType = "bytes";
 type EpoxyIoStream = {
 	read: ReadableStream<Uint8Array>,
 	write: WritableStream<Uint8Array>,
+	/** UDP streams only: sends one datagram; one over a Wisp packet's 64 KiB fails this call alone (EMSGSIZE) */
+	send?: (datagram: Uint8Array) => Promise<void>,
 };
 type EpoxyWispTransportResult = { read: ReadableStream<ArrayBuffer>, write: WritableStream<Uint8Array> };
 type EpoxyWispTransport = string | (() => Promise<EpoxyWispTransportResult> | EpoxyWispTransportResult);
