@@ -39,6 +39,14 @@ export class EpoxyClient {
   replace_stream_provider(): Promise<void>;
   fetch(url: EpoxyUrlInput, options: object): Promise<Response>;
   constructor(transport: EpoxyWispTransport, options: EpoxyClientOptions);
+  /**
+   * A client of its own connection pool and TLS session caches over this
+   * client's wisp connection: a network partition's (a browser keeps
+   * apart what pages of different top-level sites connect to, and every
+   * connection is a wisp stream, so the partition opens no new wisp
+   * connection)
+   */
+  partition(): EpoxyClient;
   redirect_limit: number;
   user_agent: string;
   buffer_size: number;
