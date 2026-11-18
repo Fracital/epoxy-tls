@@ -1206,14 +1206,7 @@ function __wbg_get_imports() {
         const ret = getObject(arg0).readyState;
         return ret;
     };
-    imports.wbg.__wbg_ready_480b0e63c18378c7 = function(arg0) {
-        const ret = getObject(arg0).ready;
-        return addHeapObject(ret);
-    };
     imports.wbg.__wbg_releaseLock_091899af97991d2e = function(arg0) {
-        getObject(arg0).releaseLock();
-    };
-    imports.wbg.__wbg_releaseLock_a389e6ea62ce0f4d = function(arg0) {
         getObject(arg0).releaseLock();
     };
     imports.wbg.__wbg_require_60cc747a6bc5215a = function() { return handleError(function () {
@@ -1328,7 +1321,7 @@ function __wbg_get_imports() {
         const ret = false;
         return ret;
     };
-    imports.wbg.__wbindgen_closure_wrapper3875 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper3876 = function(arg0, arg1, arg2) {
         const ret = makeMutClosure(arg0, arg1, 161, __wbg_adapter_51);
         return addHeapObject(ret);
     };
