@@ -43,9 +43,11 @@ export class EpoxyClient {
    * client's wisp connection: a network partition's (a browser keeps
    * apart what pages of different top-level sites connect to, and every
    * connection is a wisp stream, so the partition opens no new wisp
-   * connection)
+   * connection). `ech_resolver`, when given, is the partition's own
+   * (a browser keys its host cache, HTTPS records included, by the
+   * partition too); without it the partition asks this client's.
    */
-  partition(): EpoxyClient;
+  partition(ech_resolver?: Function | null): EpoxyClient;
   redirect_limit: number;
   user_agent: string;
   buffer_size: number;

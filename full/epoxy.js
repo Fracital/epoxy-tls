@@ -481,11 +481,14 @@ export class EpoxyClient {
      * client's wisp connection: a network partition's (a browser keeps
      * apart what pages of different top-level sites connect to, and every
      * connection is a wisp stream, so the partition opens no new wisp
-     * connection)
+     * connection). `ech_resolver`, when given, is the partition's own
+     * (a browser keys its host cache, HTTPS records included, by the
+     * partition too); without it the partition asks this client's.
+     * @param {Function | null} [ech_resolver]
      * @returns {EpoxyClient}
      */
-    partition() {
-        const ret = wasm.epoxyclient_partition(this.__wbg_ptr);
+    partition(ech_resolver) {
+        const ret = wasm.epoxyclient_partition(this.__wbg_ptr, isLikeNone(ech_resolver) ? 0 : addHeapObject(ech_resolver));
         return EpoxyClient.__wrap(ret);
     }
 }
@@ -1475,31 +1478,31 @@ function __wbg_get_imports() {
         const ret = false;
         return ret;
     };
-    imports.wbg.__wbindgen_closure_wrapper5498 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper5500 = function(arg0, arg1, arg2) {
         const ret = makeMutClosure(arg0, arg1, 187, __wbg_adapter_51);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper894 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper897 = function(arg0, arg1, arg2) {
         const ret = makeMutClosure(arg0, arg1, 187, __wbg_adapter_34);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper971 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper974 = function(arg0, arg1, arg2) {
         const ret = makeClosure(arg0, arg1, 18, __wbg_adapter_37);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper973 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper976 = function(arg0, arg1, arg2) {
         const ret = makeClosure(arg0, arg1, 22, __wbg_adapter_40);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper975 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper978 = function(arg0, arg1, arg2) {
         const ret = makeClosure(arg0, arg1, 22, __wbg_adapter_40);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper977 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper980 = function(arg0, arg1, arg2) {
         const ret = makeClosure(arg0, arg1, 18, __wbg_adapter_45);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper979 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper982 = function(arg0, arg1, arg2) {
         const ret = makeClosure(arg0, arg1, 22, __wbg_adapter_48);
         return addHeapObject(ret);
     };
